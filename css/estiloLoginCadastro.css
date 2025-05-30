@@ -1,0 +1,67 @@
+body{
+    background-color: #473469;
+    font-family: 'Arial';
+    
+}
+
+h1{
+    color: #f2e7d2;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    justify-content: space-between;
+}
+
+.divForm{
+    padding: 2rem;
+
+    box-shadow: 12px 10px 36px 1px rgba(0,0,0,0.53);
+    -webkit-box-shadow: 12px 10px 36px 1px rgba(0,0,0,0.53);
+    -moz-box-shadow: 12px 10px 36px 1px rgba(0,0,0,0.53);
+    border-radius: 10px;
+    background-color: #9c9a92;
+}
+
+/* Formatação dos inputs */
+.divInput{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.divInput input{
+    height: 5vh;
+    margin: 0 2rem;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+}
+
+.divLink{
+    text-align: center;
+}
+
+/* Formatação dos botões */
+.divBotao{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.btnLogin{
+    background-color: #1c1131;
+    color: white;
+    width: 4rem;
+    border-radius: 1rem;
+}
+
+.link{
+    text-decoration: none;
+}

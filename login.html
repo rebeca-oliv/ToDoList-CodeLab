@@ -3,16 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/estiloLoginCadastro.css">
     <title>Document</title>
 </head>
 <body>
     <h1>Login</h1>
 
-    
-    <form>
-        <input type="email" name="usuEmail" id="usuEmail" placeholder="Email">
-        <input type="password" name="usuSenha" id="usuSenha">
-    </form>
+    <main class="container">
+        <div></div>
+        <div class="divForm">
+            <div class="divInput">
+                <input type="email" name="usuEmail" id="usuEmail" placeholder="Email" required>
+                <input type="password" name="usuSenha" id="usuSenha" placeholder="Senha" required>
+            </div>
+            
+            <div class="divBotao">
+                <div class="divLink">
+                    <p> Não possui conta?</p> 
+                    <a class="link" href="/cadastro.html">Cadastre-se</a>
+                </div>
+                <button class="btnLogin" type="submit"> Entrar </button>
+            </div>
+        </div>
+        <div></div>
+    </main>
 
 </body>
 </html>
