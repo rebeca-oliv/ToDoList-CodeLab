@@ -3,32 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/cadastro.css">
+    <link rel="stylesheet" href="/css/estiloLoginCadastro.css">
     <title>Document</title>
 </head>
 <body>
     <h1> Cadastro </h1>
 
     <main class="container">
-        <div>
-            <label for="usuNome"> Nome: </label>
-            <input type="text" name="usuNome" id="usuNome" placeholder="Nome">
-        </div>
-        
-        <div>
-            <label for="usuEmail"> Email: </label>
-            <input type="email" name="usuEmail" id="usuEmail" placeholder="Email">
-        </div>
+        <div></div>
+        <div class="divForm">
+            <div class="divInput">
+                <input type="text" name="usuNome" id="usuNome" placeholder="Nome" required>
+                <input type="email" name="usuEmail" id="usuEmail" placeholder="Email" required>
+                <input type="password" name="usuSenha" id="usuSenha" placeholder="Senha" required>
+                <input type="password" name="usuConfSenha" id="usuConfSenha" placeholder="Confirmar a senha" required>
+            </div>
 
-        <div>
-            <label for="usuSenha"> Senha: </label>
-            <input type="password" name="usuSenha" id="usuSenha" placeholder="Senha">
+            <div class="divBotao">
+                <div class="divLink">
+                    <p> Já possui conta?</p> 
+                    <a class="link" href="/login.html">Login</a>
+                </div>
+                <button class="btnCadastrar" type="submit"> Cadastrar </button>
+            </div>
         </div>
-        
-        <div>
-            <label for="usuConfSenha"> Confirmar a senha: </label>
-            <input type="password" name="usuConfSenha" id="usuConfSenha" placeholder="Confirmar a senha">
-        </div>
+        <div></div>
     </main>
     
 </body>
