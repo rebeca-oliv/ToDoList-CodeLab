@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Sour Gummy' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/stylePerfil.css">
+    <link rel="icon" type="image/x-icon" href="/imgs/task1.png">
+    <title>Perfil</title>
+</head>
+<body>
+    <header class="cabeçalho">
+        <img src="imgs/task1.png" alt="Logo do Site" height="115px">
+        <div class="palavras">
+            <h1>Tasks</h1>
+            <h3>Minha Lista de Tarefas</h3>
+        </div>
+    </header>
+
+    <main class="container">
+        <div></div>
+        <div class="divPerfil">
+            <div class="divForm">
+                <img src="imgs/perfil.webp" alt="Foto de perfil">
+                <div class="divInput">
+                    <div>
+                        <label for="usuNome"> Nome: </label>
+                        <input type="text" name="usuNome" id="usuNome" placeholder="Nome" required>
+                    </div>
+                    <div>
+                        <label for="usuNome"> Email: </label>
+                        <input type="email" name="usuEmail" id="usuEmail" placeholder="Email" disabled>
+                    </div>
+                    <div class="divInfoTarefas">
+                        <label> Tarefas concluídas: </label>
+                        <p> 0 </p>
+                    </div>
+                    <div class="divInfoTarefas">
+                        <label> Tarefas pendentes: </label>
+                        <p> 0 </p>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="divBotao">
+                <a href="/principal.html" role="button">
+                    <button class="btn"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708z"/>
+                        </svg>
+                        Voltar 
+                    </button>
+                </a>
+                <a href="/login.html" role="button">
+                    <button class="btn"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5M10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5"/>
+                        </svg>
+                        Sair 
+                    </button>
+                </a>
+                <button class="btn" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+                    </svg>
+                     Salvar 
+                </button>
+            </div>
+        </div>
+        <div></div>
+    </main>
+    
+</body>
+</html>

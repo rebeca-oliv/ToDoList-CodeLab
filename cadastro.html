@@ -3,13 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
-    <link rel="stylesheet" href="/css/estiloLoginCadastro.css">
-    <title>ToDo List</title>
+    <link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Sour Gummy' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/styleForm.css">
+    <link rel="icon" type="image/x-icon" href="/imgs/task1.png">
+    <title>Cadastro</title>
 </head>
 <body>
-    <h1> Cadastro </h1>
+    <header class="cabeçalho">
+        <img src="imgs/task1.png" alt="Logo do Site" height="115px">
+        <div class="palavras">
+            <h1>Tasks</h1>
+            <h3>Minha Lista de Tarefas</h3>
+        </div>
+    </header>
 
     <main class="container">
         <div></div>
@@ -21,16 +28,21 @@
                 <input type="password" name="usuConfSenha" id="usuConfSenha" placeholder="Confirmar a senha" required>
             </div>
 
+            <div class="divMensagem">
+                <p class="pMensagem"></p>
+            </div>
+
             <div class="divBotao">
                 <div class="divLink">
                     <p> Já possui conta?</p> 
                     <a class="link" href="/login.html">Login</a>
                 </div>
-                <button class="btnCadastrar" type="submit"> Cadastrar </button>
+                <button class="btnCadastrar"> Cadastrar </button>
             </div>
         </div>
         <div></div>
     </main>
     
+    <script src="/js/cadastro.js"> </script>
 </body>
 </html>

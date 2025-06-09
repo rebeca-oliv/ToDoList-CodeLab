@@ -2,18 +2,46 @@ body{
     background-color: #473469;   
 }
 
-h1{
-    font-family: 'Raleway', sans-serif;
+/*Header*/
+.cabeçalho {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 1.5em;
+    margin-bottom: 10px;
+} 
+
+.palavras {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     color: #f2e7d2;
-    text-align: center;
-    font-size: 2.5em;
+
 }
+
+.cabeçalho h1{
+    margin: 0;
+    padding:  0;
+    font-family: 'Cookie';
+    font-size: 77px;
+}
+
+.cabeçalho h3{
+    margin: 0px;
+    color: rgb(161, 161, 161);
+    padding: 0%;
+    font-family: 'Sour Gummy';
+    font-size: 20px;
+} 
 
 .container{
     display: grid;
     grid-template-columns: 30% 40% 30%;
     justify-content: space-between;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Sour Gummy', sans-serif;
 }
 
 .divForm{
@@ -39,6 +67,7 @@ h1{
     border: white 1px solid;
     border-radius: 10px;
     font-size: 1em;
+    font-family: 'Sour Gummy', sans-serif;
 }
 
 .divInput input:focus{
@@ -65,6 +94,7 @@ h1{
     border-radius: 10px;
     font-size: 1.1em;
     font-weight: bold;
+    font-family: 'Sour Gummy', sans-serif;
 }
 
 .divBotao button:hover{
@@ -82,9 +112,36 @@ h1{
     height: 3em;
 }
 
+.btnVoltar{
+    width: 4em;
+    height: 3em;
+}
+
 .divLink p{
     margin-bottom: 0;
 }
-.link{
+
+.link, a{
     text-decoration: none;
+}
+
+/*Caixa de erro*/
+#divErro{
+    display: block;
+    border: 2px solid #f1aeb5;
+    border-radius: 10px;
+    padding: 0.5em;
+    margin-top: 1em;
+    background-color: #f8d7da;
+    color: #58151c;
+}
+
+#divCerto{
+    display: block;
+    border: 2px solid #a3cfbb;
+    border-radius: 10px;
+    padding: 0.5em;
+    margin-top: 1em;
+    background-color: #d1e7dd;
+    color: #0a3622;
 }
