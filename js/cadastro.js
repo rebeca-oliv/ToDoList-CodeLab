@@ -42,7 +42,8 @@ function cadastrarUsuario (nome, email, senha){
         id: gerarIdUnico(),
         nome,
         email,
-        senha
+        senha,
+        tarefas: []
     }
 
     usuarios.push(novoUsuario)
