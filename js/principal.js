@@ -1,58 +1,67 @@
-/*Inputs*/
-let usuEmail = document.querySelector("#usuEmail")
-let usuSenha = document.querySelector("#usuSenha")
-
-/* Parte de login */
-
-let btnLogin = document.querySelector(".btnLogin")
-
-/*Pegando a lista de usuários no localStorage*/
-const usuarios = JSON.parse(localStorage.getItem("usuarios"));
-
-let usuLogado = -1
-
-function encontrarUsuario(email, senha){
-    for (chave of usuarios){
-        if (chave.email ==  email && chave.senha == senha){    
-            usuLogado = chave.id
-            return usuLogado
-        }
-    }
-}
-
-btnLogin.addEventListener("click", () => {
-    encontrarUsuario(usuEmail.value, usuSenha.value)
-    if (usuLogado != -1){
-        let idUsuLogado = encontrarUsuario(usuEmail.value, usuSenha.value)
-        alert("Entrando no sistema!")
-        setTimeout(() => {
-                window.location.href = "http://127.0.0.1:5500/principal.html";
-        }, 2000);
-    } 
-    else{
-        if(chave.email == usuEmail.value && chave.senha != usuSenha.value){
-            alert("Senha incorreta!")
-        }
-        else{
-            alert("Usuário não cadastrado.")
-        }
-    }
-})
-
 /* Parte de adicionar tarefas */
+let usuarios = JSON.parse(localStorage.getItem("usuarios"));
+let usuario = JSON.parse(localStorage.getItem("usuario"))
 
-let novaTarefa = document.querySelector(".novaTarefa")
 
+let novaTarefa = document.querySelector("#novaTarefa")
 let btnAdicionar = document.querySelector(".adicionartarefa")
 
-btnAdicionar.addEventListener("click", () => {
-    const novaTarefa = {
+function listarTarefas() {
+    let listaTarefas = document.querySelector(".listaTarefas")
+    listaTarefas.innerHTML = ' '
+
+    for (chave of usuario.tarefas){
+        let nomeTarefa = chave.nomeTar
+        let verifConc = chave.concluida
+
+        //Criando o div de tarefas
+        const divTarefa = document.createElement("div")
+        divTarefa.className = "tarefa"
+
+        const checkbox = document.createElement("input")
+        checkbox.type = "checkbox"
+
+        const titulo = document.createElement("h5")
+        titulo.innerHTML = nomeTarefa
+        
+        divTarefa.appendChild(checkbox)
+        divTarefa.appendChild(titulo)
+        listaTarefas.appendChild(divTarefa)
+    }
+
+    if (listaTarefas.innerHTML == ' '){
+        const divSem = document.createElement("div")
+        divSem.className = "bloco"
+
+        const p = document.createElement("p")
+        p.innerHTML = "Adicione Sua Primeira Tarefa"
+        
+        divSem.appendChild(p)
+        listaTarefas.appendChild(divSem)
+    } 
+}
+
+listarTarefas()
+
+function adicionarTarefa(){
+    const tarefa = {
         nomeTar: novaTarefa.value,
         concluida: false
     }
+    
+    const index = usuarios.findIndex(u => u.email === usuario.email)
+    if (index !== -1) {
+        usuarios[index] = usuario
+    }
 
-    usuarios[usuLogado-1].tarefas.push(novaTarefa);
+    usuario.tarefas.push(tarefa)
+    localStorage.setItem("usuario", JSON.stringify(usuario));
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    listarTarefas()
     alert("Tarefa cadastrada com sucesso!")
+}
+
+btnAdicionar.addEventListener("click", () => {
+    adicionarTarefa()
 })
 
