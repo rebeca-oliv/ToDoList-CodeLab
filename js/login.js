@@ -7,7 +7,8 @@ let usuSenha = document.querySelector("#usuSenha")
 let btnLogin = document.querySelector(".btnLogin")
 
 /*Pegando a lista de usuários no localStorage*/
-let usuarios = JSON.parse(localStorage.getItem("usuarios"));
+const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
 let usuario;
 
 if(localStorage.getItem("usuario")){
@@ -37,11 +38,7 @@ btnLogin.addEventListener("click", () => {
         }, 2000);
     } 
     else{
-        if(chave.email == usuEmail.value && chave.senha != usuSenha.value){
-            alert("Senha incorreta!")
-        }
-        else{
-            alert("Usuário não cadastrado.")
-        }
+        alert("Usuário não cadastrado ou senha incorreta!")
+        
     }
 })

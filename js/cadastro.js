@@ -12,18 +12,10 @@ let divMensagem = document.querySelector(".divMensagem")
 let pMensagem = document.querySelector(".pMensagem")
 
 /*Função para verificar se os campos das senhas são iguais*/
-let verificarSenha = (senha, confSenha) => {
-    if (senha != confSenha){
-        if(caixaErro.style.display == "none"){
-            divMensagem.setAttribute('id', 'divErro')
-            pMensagem.innerText = "As senhas nos dois campos devem ser iguais!"
-            divMensagem.style.display = "block"
-        }
-    } 
-    else{
-        divMensagem.style.display = "none"
+function verificarSenha(senha, confSenha){
+    if(senha != confSenha){
+        return false
     }
-
 }
 
 /*Gerar um id para cada usuário*/
@@ -51,10 +43,14 @@ function cadastrarUsuario (nome, email, senha){
 }
 
 btnCadastrar.addEventListener("click", () => {
-    cadastrarUsuario(usuNome.value, usuEmail.value, usuSenha.value)
-    alert("Usuário cadastrado com sucesso!")
+    if(verificarSenha(usuSenha.value, usuConfSenha.value) == false){
+        alert("As senhas nos dois campos devem ser iguais!")
+    } else {
+        cadastrarUsuario(usuNome.value, usuEmail.value, usuSenha.value)
+        alert("Usuário cadastrado com sucesso!")
 
-    setTimeout(() => {
-        window.location.href = "http://127.0.0.1:5500/login.html";
-    }, 2000);
+        setTimeout(() => {
+            window.location.href = "http://127.0.0.1:5500/login.html";
+        }, 2000);
+    }
 })
